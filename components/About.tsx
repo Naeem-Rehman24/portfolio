@@ -60,7 +60,11 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <ProfilePicture size="xlarge" isEditable={false} />
+              <ProfilePicture
+                size="xlarge"
+                isEditable={false}
+                defaultImage="/about-profile.png"  // ✅ Use this image for About
+              />
             </motion.div>
           </div>
 

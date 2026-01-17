@@ -5,18 +5,19 @@ export const portfolioConfig = {
   // Personal Information
   personal: {
     name: 'Naeem Rehman',
+    profileImage: "/profile.jpg",
     title: 'MERN Stack Developer',
     bio: 'Crafting beautiful and functional web applications with MongoDB, Express, React, and Node.js',
-    email: 'naeem@example.com',
-    phone: '+1 (234) 567-8900',
-    location: 'Available Worldwide',
+    email: 'naeemshar127@gmail.com',
+    phone: '+92 3043444434',
+    location: 'Available remotely Worldwide',
   },
 
   // Social Links
   social: {
     github: 'https://github.com',
     linkedin: 'https://linkedin.com',
-    email: 'mailto:naeem@example.com',
+    email: 'mailto:naeemshar127@gmail.com',
   },
 
   // About Section

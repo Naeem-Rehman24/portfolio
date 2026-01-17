@@ -47,7 +47,7 @@ export default function Hero() {
                 transition={{ delay: 0.2, type: 'spring' }}
                 className="inline-block mb-6"
               >
-                <ProfilePicture size="large" isEditable={false} />
+                <ProfilePicture size="large" isEditable={false} defaultImage="/hero-profile.png" />
               </motion.div>
 
               <motion.h1
