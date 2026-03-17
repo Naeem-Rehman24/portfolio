@@ -51,8 +51,8 @@ export default function Contact() {
   ]
 
   const socialLinks = [
-    { icon: FaGithub, href: 'https://github.com', label: 'GitHub' },
-    { icon: FaLinkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+    { icon: FaGithub, href: 'https://github.com/Ramisterio', label: 'GitHub' },
+    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/naeem-rehman-98nt/', label: 'LinkedIn' },
   ]
 
   return (

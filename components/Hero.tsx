@@ -14,11 +14,11 @@ export default function Hero() {
   }, [])
 
   const socialLinks = [
-    { icon: FaGithub, href: 'https://github.com', label: 'GitHub', color: '#ffffff' },
-    { icon: FaLinkedin, href: 'https://linkedin.com', label: 'LinkedIn', color: '#0077b5' },
+    { icon: FaGithub, href: 'https://github.com/Ramisterio', label: 'GitHub', color: '#ffffff' },
+    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/naeem-rehman-98nt/', label: 'LinkedIn', color: '#0077b5' },
     { icon: FaEnvelope, href: 'mailto:naeemshar127@gmail.com', label: 'Email', color: '#ea4335' },
     { icon: FaWhatsapp, href: 'https://wa.me/923043444434', label: 'WhatsApp', color: '#25D366' },
-    { icon: SiUpwork, href: 'https://www.upwork.com/freelancers/~yourprofile', label: 'Upwork', color: '#6FDA44' },
+    { icon: SiUpwork, href: 'https://www.upwork.com/freelancers/~01381976791d5dacc9', label: 'Upwork', color: '#6FDA44' },
   ]
 
   return (

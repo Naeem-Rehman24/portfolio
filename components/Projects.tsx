@@ -12,14 +12,14 @@ export default function Projects() {
   // Only 4 projects for horizontal scrolling
   const projects = [
     {
-      title: 'E-Commerce Platform',
+      title: 'Zaikest Paste Selling Website',
       description:
-        'A full-featured e-commerce platform with user authentication, product management, shopping cart, and payment integration.',
+        'An e-commerce website for Zaikest paste products with catalog browsing, cart, and fast checkout flow.',
       image: '/project-ecommerce.jpg',
       gradient: 'gradient-bg-1',
       technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
       github: 'https://github.com',
-      live: 'https://example.com',
+      live: 'https://zaikest.com',
     },
     {
       title: 'Task Management App',
@@ -135,25 +135,24 @@ export default function Projects() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="flex-shrink-0 w-[260px] xs:w-[280px] sm:w-80 h-[460px] xs:h-[480px] sm:h-[500px] bg-gray-800/80 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-gray-700/80 transition-all duration-300 border border-gray-700/50 hover:border-primary-500/50 shadow-lg hover:shadow-2xl hover:shadow-primary-500/20 flex flex-col"
+                className="flex-shrink-0 w-[86vw] max-w-[360px] xs:w-[280px] sm:w-80 bg-gray-800/80 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-gray-700/80 transition-all duration-300 border border-gray-700/50 hover:border-primary-500/50 shadow-lg hover:shadow-2xl hover:shadow-primary-500/20 flex flex-col"
               >
-                <div className={`relative h-48 ${project.gradient} overflow-hidden flex-shrink-0`}>
-                  {/* Image placeholder - replace with actual project images */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-white text-lg sm:text-xl md:text-2xl font-bold opacity-30 text-center px-4">
-                      {project.title}
-                    </div>
-                  </div>
-                  {/* Uncomment below and add your project images to public folder */}
-                  {/* <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover opacity-80"
-                    sizes="320px"
-                  /> */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
-                </div>
+                <a
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`relative aspect-[4/3] sm:aspect-[16/9] ${project.gradient} overflow-hidden flex-shrink-0 group focus:outline-none focus:ring-2 focus:ring-primary-400 rounded-xl`}
+              >
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-contain bg-slate-900/70 opacity-95"
+                  sizes="320px"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
+              </a>
                 <div className="p-4 sm:p-6 flex flex-col flex-grow">
                   <h3 className="text-xl sm:text-2xl font-bold mb-3 bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">
                     {project.title}
