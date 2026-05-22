@@ -14,7 +14,7 @@ export default function Hero() {
   }, [])
 
   const socialLinks = [
-    { icon: FaGithub, href: 'https://github.com/Ramisterio', label: 'GitHub', color: '#ffffff' },
+    { icon: FaGithub, href: 'https://github.com/Naeem-Rehman24', label: 'GitHub', color: '#ffffff' },
     { icon: FaLinkedin, href: 'https://www.linkedin.com/in/naeem-rehman-98nt/', label: 'LinkedIn', color: '#0077b5' },
     { icon: FaEnvelope, href: 'mailto:naeemshar127@gmail.com', label: 'Email', color: '#ea4335' },
     { icon: FaWhatsapp, href: 'https://wa.me/923043444434', label: 'WhatsApp', color: '#25D366' },
