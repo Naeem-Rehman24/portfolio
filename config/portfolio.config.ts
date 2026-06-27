@@ -5,9 +5,9 @@ export const portfolioConfig = {
   // Personal Information
   personal: {
     name: 'Naeem Rehman',
-    profileImage: "/profile.jpg",
+    profileImage: "/hero-profile.png",
     title: 'MERN Stack Developer',
-    bio: 'Crafting beautiful and functional web applications with MongoDB, Express, React, and Node.js',
+    bio: 'Crafting beautiful and functional web applications with MongoDB, SQL, Express, React, and Node.js',
     email: 'naeemshar127@gmail.com',
     phone: '+92 3043444434',
     location: 'Available remotely Worldwide',
@@ -24,7 +24,7 @@ export const portfolioConfig = {
   about: {
     description: [
       "I'm Naeem Rehman, a dedicated MERN Stack Developer with a passion for building scalable web applications. I specialize in creating seamless user experiences through clean code and modern design principles.",
-      "With expertise in MongoDB, Express.js, React, and Node.js, I bring ideas to life by combining robust backend architecture with intuitive frontend interfaces. My goal is to deliver high-quality solutions that not only meet but exceed client expectations.",
+      "With expertise in MongoDB, SQL, Express.js, React, and Node.js, I bring ideas to life by combining robust backend architecture with intuitive frontend interfaces. My goal is to deliver high-quality solutions that not only meet but exceed client expectations.",
       "When I'm not coding, I'm constantly learning new technologies and staying updated with the latest trends in web development to ensure I'm always delivering cutting-edge solutions.",
     ],
     stats: [
@@ -44,7 +44,7 @@ export const portfolioConfig = {
       },
       {
         title: 'Database Design',
-        description: 'Designing and managing MongoDB databases for optimal performance',
+        description: 'Designing and managing MongoDB and SQL databases for optimal performance',
       },
       {
         title: 'Full Stack Solutions',
@@ -69,6 +69,7 @@ export const portfolioConfig = {
       { name: 'Node.js', level: 90 },
       { name: 'Express.js', level: 90 },
       { name: 'MongoDB', level: 85 },
+      { name: 'SQL', level: 80 },
     ],
     tools: [
       { name: 'Git', level: 85 },

@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --tech-industry-photo: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&fm=jpg&q=82&w=2400');
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,17 +19,54 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #020617;
+}
+
+.site-photo-bg {
+  position: relative;
+  isolation: isolate;
+}
+
+.site-photo-bg::before {
+  content: '';
+  position: fixed;
+  inset: -2rem;
+  z-index: -2;
+  background-image:
+    linear-gradient(120deg, rgba(2, 6, 23, 0.78), rgba(15, 23, 42, 0.5), rgba(2, 6, 23, 0.82)),
+    var(--tech-industry-photo);
+  background-position: center;
+  background-size: cover;
+  animation: site-photo-pan 32s ease-in-out infinite alternate;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.site-photo-bg::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(2, 6, 23, 0.12), rgba(2, 6, 23, 0.48)),
+    radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.18), transparent 34%),
+    radial-gradient(circle at 82% 42%, rgba(14, 165, 233, 0.14), transparent 30%),
+    rgba(2, 6, 23, 0.22);
+  pointer-events: none;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .text-brand {
+    color: #38bdf8;
+  }
+  .bg-brand {
+    background-color: #38bdf8;
+  }
+  .border-brand {
+    border-color: #38bdf8;
   }
 }
 
@@ -100,4 +138,119 @@ html {
 /* Professional shadow */
 .shadow-professional {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* Animated tech industry hero background */
+.tech-industry-image {
+  background-image:
+    linear-gradient(120deg, rgba(2, 6, 23, 0.5), rgba(15, 23, 42, 0.28), rgba(2, 6, 23, 0.58)),
+    var(--tech-industry-photo);
+  background-position: center;
+  background-size: cover;
+  animation: tech-image-pan 20s ease-in-out infinite alternate;
+  transform-origin: center;
+  filter: saturate(1.08) contrast(1.04);
+  will-change: transform;
+}
+
+.tech-grid {
+  background-image:
+    linear-gradient(rgba(129, 140, 248, 0.13) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(129, 140, 248, 0.13) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(circle at center, black 0%, black 42%, transparent 78%);
+  animation: tech-grid-drift 18s linear infinite;
+}
+
+.tech-circuit {
+  background:
+    linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.45), transparent) 0 22% / 42% 1px no-repeat,
+    linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.42), transparent) 100% 58% / 46% 1px no-repeat,
+    linear-gradient(180deg, transparent, rgba(99, 102, 241, 0.4), transparent) 18% 0 / 1px 48% no-repeat,
+    linear-gradient(180deg, transparent, rgba(56, 189, 248, 0.32), transparent) 78% 100% / 1px 42% no-repeat;
+  animation: tech-circuit-flow 9s ease-in-out infinite alternate;
+}
+
+.tech-orb {
+  animation: tech-orb-float 11s ease-in-out infinite;
+}
+
+.tech-chip {
+  animation: tech-chip-float 8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.tech-chip-delay-1 {
+  animation-delay: -2s;
+}
+
+.tech-chip-delay-2 {
+  animation-delay: -4s;
+}
+
+@keyframes tech-grid-drift {
+  from {
+    background-position: 0 0, 0 0;
+  }
+  to {
+    background-position: 64px 64px, 64px 64px;
+  }
+}
+
+@keyframes tech-image-pan {
+  from {
+    transform: scale(1.04) translate3d(-1.2rem, -0.4rem, 0);
+  }
+  to {
+    transform: scale(1.1) translate3d(1.2rem, 0.6rem, 0);
+  }
+}
+
+@keyframes site-photo-pan {
+  from {
+    transform: scale(1.04) translate3d(-1rem, -0.5rem, 0);
+  }
+  to {
+    transform: scale(1.1) translate3d(1rem, 0.75rem, 0);
+  }
+}
+
+@keyframes tech-circuit-flow {
+  from {
+    opacity: 0.45;
+    transform: translate3d(-1.5rem, 0, 0);
+  }
+  to {
+    opacity: 0.85;
+    transform: translate3d(1.5rem, -0.75rem, 0);
+  }
+}
+
+@keyframes tech-orb-float {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(1.5rem, -1rem, 0) scale(1.04);
+  }
+}
+
+@keyframes tech-chip-float {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0.75rem, -1rem, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-grid,
+  .tech-industry-image,
+  .tech-circuit,
+  .tech-orb,
+  .tech-chip,
+  .site-photo-bg::before {
+    animation: none;
+  }
 }

@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 
 interface ProfilePictureProps {
   size?: 'small' | 'medium' | 'large' | 'xlarge'
@@ -14,7 +13,7 @@ export default function ProfilePicture({
   size = 'large',
   isEditable = false,
   className = '',
-  defaultImage = '/profile.png', // fallback image
+  defaultImage = '/hero-profile.png', // fallback image for the main profile photo
 }: ProfilePictureProps) {
   const sizeClasses = {
     small: 'w-24 h-24',
@@ -25,12 +24,7 @@ export default function ProfilePicture({
 
   return (
     <div className={`relative inline-block ${className}`}>
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ type: 'spring', stiffness: 200 }}
-        className={`${sizeClasses[size]} mx-auto rounded-full bg-gradient-to-br from-primary-500 via-secondary-500 to-accent-500 p-1 shadow-professional`}
-      >
+      <div className={`${sizeClasses[size]} mx-auto rounded-full bg-gradient-to-br from-brand via-brand/70 to-brand/40 p-1 shadow-professional`}>
         <div className="w-full h-full rounded-full bg-slate-800 overflow-hidden relative">
           <Image
             src={defaultImage} // use the prop image
@@ -40,7 +34,7 @@ export default function ProfilePicture({
             priority
           />
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }

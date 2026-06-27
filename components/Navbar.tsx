@@ -35,8 +35,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <a href="#home" className="text-lg sm:text-xl md:text-2xl font-bold text-white">
-              <span className="text-primary">N</span>aeem{' '}
-              <span className="text-secondary">R</span>ehman
+              <span className="text-brand">N</span>aeem{' '}
+              <span className="text-brand">R</span>ehman
             </a>
           </div>
 
@@ -47,10 +47,10 @@ export default function Navbar() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 relative group"
+                className="text-slate-200 hover:text-brand px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 relative group"
               >
                 {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-400 to-secondary-400 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand group-hover:w-full transition-all duration-300"></span>
               </a>
               ))}
             </div>
@@ -60,7 +60,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white focus:outline-none"
+              className="text-slate-200 hover:text-white focus:outline-none"
             >
               {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
@@ -77,7 +77,7 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="text-gray-300 hover:text-primary-400 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                className="text-slate-200 hover:text-brand block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
               >
                 {item.name}
               </a>
