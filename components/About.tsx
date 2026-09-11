@@ -99,21 +99,21 @@ export default function About() {
           <Reveal className="space-y-6" delay={0.08}>
             <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-lg shadow-slate-950/20">
               <p className="text-slate-700 text-base sm:text-lg leading-relaxed mb-4">
-                I'm <strong className="text-brand text-lg sm:text-xl">Naeem Rehman</strong>, a dedicated <strong className="text-brand">MERN Stack Developer</strong>
-                with a passion for building scalable web applications. I specialize
-                in creating seamless user experiences through clean code and
-                modern design principles.
+                I'm <strong className="text-brand text-lg sm:text-xl">Naeem Rehman</strong>, a <strong className="text-brand">MERN Stack Developer</strong>
+                who builds scalable, user-focused web applications. I combine
+                clean code, thoughtful architecture, and modern design to create
+                seamless digital experiences.
               </p>
               <p className="text-slate-700 text-lg leading-relaxed mb-4">
-                With expertise in <strong className="text-brand">MongoDB</strong>, <strong className="text-brand">SQL</strong>, <strong className="text-brand">Express.js</strong>, <strong className="text-brand">React</strong>, and <strong className="text-brand">Node.js</strong>, I bring
-                ideas to life by combining robust backend architecture with
-                intuitive frontend interfaces. My goal is to deliver high-quality
-                solutions that not only meet but exceed client expectations.
+                I work across <strong className="text-brand">MongoDB</strong>, <strong className="text-brand">SQL</strong>, <strong className="text-brand">Express.js</strong>, <strong className="text-brand">React</strong>, and <strong className="text-brand">Node.js</strong> to turn ideas into
+                reliable products. From robust backend systems to intuitive
+                interfaces, I deliver practical solutions built around real
+                business needs.
               </p>
               <p className="text-slate-700 text-lg leading-relaxed">
-                When I'm not coding, I'm constantly learning new technologies and
-                staying updated with the latest trends in web development to ensure
-                I'm always delivering cutting-edge solutions.
+                I continuously sharpen my skills and explore emerging technologies
+                so every project benefits from current, effective development
+                practices.
               </p>
             </div>
           </Reveal>

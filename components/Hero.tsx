@@ -64,7 +64,7 @@ export default function Hero() {
             </div>
 
             <p className="text-base sm:text-lg md:text-xl text-slate-200 max-w-2xl mx-auto mb-8 px-4">
-              Crafting beautiful and functional web applications with
+              Building fast, scalable web applications with
               MongoDB, Express, React, and Node.js
             </p>
 
@@ -83,7 +83,7 @@ export default function Hero() {
                 View My Work
               </a>
               <a
-                href="/cv.pdf"
+                href="/finalised resume.pdf"
                 download
                 className="px-6 sm:px-8 py-3 bg-white text-slate-900 rounded-lg font-semibold hover:bg-gray-200 transition-colors duration-150 shadow-lg text-center"
               >
